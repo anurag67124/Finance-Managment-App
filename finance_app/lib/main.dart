@@ -15,12 +15,17 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+   static Color my_color = Color.fromARGB(255, 128, 4, 150);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Bottom(),
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        buttonTheme: ButtonThemeData(buttonColor:my_color )
+      ),
     );
   }
 }
