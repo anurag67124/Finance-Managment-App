@@ -55,22 +55,31 @@ class _HomeState extends State<Home> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 15,
-                                color: Colors.grey,
+                                color: Color.fromARGB(255, 8, 1, 1),
                               ),
                             ),
                           ],
                         ),
                       ),
                     ),
-                    SliverList(
-                      delegate: SliverChildBuilderDelegate(
-                        (context, index) {
-                          history = box.values.toList()[index];
-                          return getList(history, index);
-                        },
-                        childCount: box.length,
+                    NotificationListener<ScrollNotification>(
+                      onNotification: (ScrollNotification scrollInfo) {
+                        if (scrollInfo.metrics.pixels ==
+                            scrollInfo.metrics.maxScrollExtent) {
+                          // Do something when scrolling reaches the bottom
+                        }
+                        return false;
+                      },
+                      child: SliverList(
+                        delegate: SliverChildBuilderDelegate(
+                          (context, index) {
+                            history = box.values.toList()[index];
+                            return getList(history, index);
+                          },
+                          childCount: box.length,
+                        ),
                       ),
-                    )
+                    ),
                   ],
                 );
               })),
