@@ -22,7 +22,19 @@ class _Add_ScreenState extends State<Add_Screen> {
     'food',
     "Transfer",
     "Transportation",
-    "Education"
+    "Education",
+    "beauty",
+    "health",
+    "clothes",
+    "home",
+    "electricity",
+    "entertainment",
+    "gift",
+    "maintenance",
+    "tax",
+    "fruits",
+    "veggies",
+    "phone"
   ];
   final List<String> _itemei = [
     'Income',
