@@ -42,8 +42,8 @@ class _StatisticsState extends State<Statistics> {
         SliverToBoxAdapter(
           child: Column(
             children: [
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 'Statistics',
                 style: TextStyle(
                   color: Colors.black,
@@ -51,7 +51,7 @@ class _StatisticsState extends State<Statistics> {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
@@ -73,7 +73,7 @@ class _StatisticsState extends State<Statistics> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: index_color == index
-                                  ? Color.fromARGB(255, 52, 3, 62)
+                                  ? const Color.fromARGB(255, 52, 3, 62)
                                   : Colors.white,
                             ),
                             alignment: Alignment.center,
@@ -94,16 +94,16 @@ class _StatisticsState extends State<Statistics> {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Chart(
                 indexx: index_color,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       'Top Spending',
                       style: TextStyle(
@@ -132,14 +132,14 @@ class _StatisticsState extends State<Statistics> {
               ),
               title: Text(
                 a[index].name,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w600,
                 ),
               ),
               subtitle: Text(
                 ' ${a[index].datetime.year}-${a[index].datetime.day}-${a[index].datetime.month}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.w600,
                 ),
               ),

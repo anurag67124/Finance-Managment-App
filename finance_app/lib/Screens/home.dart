@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               'Transactions History',
                               style: TextStyle(
@@ -103,14 +103,14 @@ class _HomeState extends State<Home> {
       ),
       title: Text(
         history.name,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 17,
           fontWeight: FontWeight.w600,
         ),
       ),
       subtitle: Text(
         '${day[history.datetime.weekday - 1]}  ${history.datetime.year}-${history.datetime.day}-${history.datetime.month}',
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.w600,
         ),
       ),
@@ -133,7 +133,7 @@ class _HomeState extends State<Home> {
             Container(
               width: double.infinity,
               height: 240,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 52, 3, 62),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
@@ -148,13 +148,18 @@ class _HomeState extends State<Home> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(7),
                       child: Container(
-                        height: 40,
-                        width: 40,
-                        color: Color.fromRGBO(250, 250, 250, 0.1),
-                        child: Icon(
-                          Icons.notification_add_outlined,
-                          size: 30,
-                          color: Colors.white,
+                        height: 50,
+                        width: 50,
+                        color: const Color.fromRGBO(250, 250, 250, 0.1),
+                        child: IconButton(
+                          icon: const Icon(Icons.notification_add_outlined,
+                              size: 30, color: Colors.white),
+                          onPressed: () {
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text("No Messages!"),
+                            ));
+                          },
                         ),
                       ),
                     ),
@@ -163,7 +168,7 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.only(top: 35, left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text(
                           'Good Morning',
                           style: TextStyle(
@@ -195,7 +200,7 @@ class _HomeState extends State<Home> {
             height: 170,
             width: 320,
             decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Color.fromRGBO(47, 125, 121, 0.3),
                   offset: Offset(0, 6),
@@ -203,17 +208,17 @@ class _HomeState extends State<Home> {
                   spreadRadius: 6,
                 ),
               ],
-              color: Color.fromARGB(255, 113, 3, 128),
+              color: const Color.fromARGB(255, 113, 3, 128),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Column(
               children: [
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text(
                         'Total Balance',
                         style: TextStyle(
@@ -229,14 +234,14 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                SizedBox(height: 7),
+                const SizedBox(height: 7),
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Row(
                     children: [
                       Text(
                         '\Rs ${total()}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
                           color: Colors.white,
@@ -245,14 +250,14 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           CircleAvatar(
                             radius: 13,
                             backgroundColor: Color.fromARGB(255, 8, 143, 62),
@@ -274,7 +279,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           CircleAvatar(
                             radius: 13,
                             backgroundColor: Color.fromRGBO(150, 6, 6, 1),
@@ -298,7 +303,7 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                SizedBox(height: 6),
+                const SizedBox(height: 6),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Row(
@@ -306,7 +311,7 @@ class _HomeState extends State<Home> {
                     children: [
                       Text(
                         '\Rs ${income()}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
                           color: Color.fromARGB(255, 3, 156, 11),
@@ -314,7 +319,7 @@ class _HomeState extends State<Home> {
                       ),
                       Text(
                         '\Rs ${expenses()}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
                           color: Color.fromARGB(255, 199, 6, 6),

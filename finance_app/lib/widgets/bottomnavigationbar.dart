@@ -11,23 +11,25 @@ class Bottom extends StatefulWidget {
 }
 
 class _BottomState extends State<Bottom> {
+  // ignore: non_constant_identifier_names
   int index_color = 0;
-  List Screen = [Home(), Statistics()];
+  // ignore: non_constant_identifier_names
+  List Screen = [const Home(), const Statistics()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Screen[index_color],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => Add_Screen()));
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const Add_Screen()));
         },
-        child: Icon(Icons.add),
-        backgroundColor: Color.fromARGB(255, 52, 3, 62),
+        child: const Icon(Icons.add),
+        backgroundColor: const Color.fromARGB(255, 52, 3, 62),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         child: Padding(
           padding: const EdgeInsets.only(top: 7.5, bottom: 7.5),
           child: Row(
@@ -43,7 +45,7 @@ class _BottomState extends State<Bottom> {
                   Icons.home,
                   size: 30,
                   color: index_color == 0
-                      ? Color.fromARGB(255, 128, 4, 150)
+                      ? const Color.fromARGB(255, 128, 4, 150)
                       : Colors.black,
                 ),
               ),
@@ -57,11 +59,11 @@ class _BottomState extends State<Bottom> {
                   Icons.bar_chart_outlined,
                   size: 30,
                   color: index_color == 1
-                      ? Color.fromARGB(255, 128, 4, 150)
+                      ? const Color.fromARGB(255, 128, 4, 150)
                       : Colors.black,
                 ),
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               GestureDetector(
                 onTap: () {
                   setState(() {
@@ -72,7 +74,7 @@ class _BottomState extends State<Bottom> {
                   Icons.account_balance_wallet_outlined,
                   size: 30,
                   color: index_color == 2
-                      ? Color.fromARGB(255, 128, 4, 150)
+                      ? const Color.fromARGB(255, 128, 4, 150)
                       : Colors.black,
                 ),
               ),
@@ -86,7 +88,7 @@ class _BottomState extends State<Bottom> {
                   Icons.person_outlined,
                   size: 30,
                   color: index_color == 3
-                      ? Color.fromARGB(255, 128, 4, 150)
+                      ? const Color.fromARGB(255, 128, 4, 150)
                       : Colors.black,
                 ),
               ),
