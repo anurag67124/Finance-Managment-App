@@ -30,7 +30,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 250,
+                      height: 240,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(20),
@@ -41,10 +41,10 @@ class _ProfilePageState extends State<ProfilePage> {
                               colors: <Color>[my_color1, my_color1.withOpacity(0.8)])),
                     ),
                     Positioned(
-                      bottom: -150,
+                      bottom: -100,
                       child: Container(
-                        width: MediaQuery.of(context).size.width - 50,
-                        height: 250,
+                        width: MediaQuery.of(context).size.width - 140,
+                        height: 170,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
@@ -64,8 +64,8 @@ class _ProfilePageState extends State<ProfilePage> {
                           children: [
         
                             Container(
-                              width: 100,
-                              height: 100,
+                              width: 80,
+                              height: 80,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.blue,
@@ -96,7 +96,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               SizedBox(
-                height: 200,
+                height: 140,
               ),
         
               ElevatedButton(

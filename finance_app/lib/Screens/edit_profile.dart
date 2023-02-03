@@ -16,18 +16,14 @@ class EditProfile extends StatefulWidget {
 }
 
 class EditProfileState extends State<EditProfile> {
-  List<String> args = ["First Name", "Last Name", "Email", "Mobile Number"];
-  // TextEditingController  first_name_con = TextEditingController();
-  // TextEditingController  last_name_con = TextEditingController();
-  // TextEditingController  email_con = TextEditingController();
-  // TextEditingController  mobilenumber_con = TextEditingController();
-//    List<TextEditingController> my_controller = [];
-//    void  controllerfun (){ for(int i=1;i<5;i++) { 
-   
-// // List<TextEditingController> my_controller = [];
-// for (int i = 1; i < 5; i++) my_controller.add(TextEditingController());
-// }}
-TextEditingController  my_controller = TextEditingController();
+
+  
+  
+  TextEditingController  first_name_con = TextEditingController();
+  TextEditingController  last_name_con = TextEditingController();
+  TextEditingController  email_con = TextEditingController();
+  TextEditingController  mobilenumber_con = TextEditingController();
+
  
   List gender = ["Male", "Female", "Other"];
 
@@ -46,7 +42,11 @@ TextEditingController  my_controller = TextEditingController();
       body: SafeArea(
         child: SingleChildScrollView(
           controller: ScrollController(),
-          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+          
+          child: Column(mainAxisAlignment: MainAxisAlignment.start,
+          
+          
+           children: [
             AppBar(
               title: Center(
                   child: Row(
@@ -61,20 +61,78 @@ TextEditingController  my_controller = TextEditingController();
               )),
               
             ),
-            ...args.map(
-              (e) => Padding(
-                padding: const EdgeInsets.all(10),
-                
-                child: TextField(
+           Container(width: 400,
+             child: Padding(
                   
-                  controller: my_controller,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: e,
+                  padding: const EdgeInsets.all(10),
+                  
+                  
+                  child: TextField(
+                    
+                 
+                   controller: first_name_con,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "First Name",
+                    ),
                   ),
                 ),
-              ),
-            ),
+           ),
+                 Container(width: 400,
+                   child: Padding(
+                                 
+                                 padding: const EdgeInsets.all(10),
+                                 
+                                 
+                                 child: TextField(
+                    
+                                
+                   controller: last_name_con,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "Last Name",
+                    ),
+                                 ),
+                               ),
+                 ),
+                 Container(
+                  width: 400,
+                   child: Padding(
+                                 
+                                 padding: const EdgeInsets.all(10),
+                                 
+                                 
+                                 child: TextField(
+                    
+                                controller: email_con,
+                   
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "Email",
+                    ),
+                                 ),
+                               ),
+                 ),
+                 Container(
+                  width: 400,
+                  
+                   child: Padding(
+                                 
+                                 padding: const EdgeInsets.all(10),
+                                 
+                                 
+                                 child: TextField(
+                    
+                                controller: mobilenumber_con,
+                   
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "Mobile Number",
+                    ),
+                                 ),
+                               ),
+                 ),
+            
             // DOBInputField(
             //   firstDate: DateTime(1900),
             //   lastDate: DateTime.now(),
@@ -89,32 +147,38 @@ TextEditingController  my_controller = TextEditingController();
             //     addRadioButton(2, 'Others'),
             //   ],
             // ),
-            GenderPickerWithImage(
-              showOtherGender: true,
-              verticalAlignedText: false,
-              selectedGender: Gender.Male,
-              selectedGenderTextStyle: TextStyle(
-                  color: Color(0xFF8b32a8), fontWeight: FontWeight.bold),
-              unSelectedGenderTextStyle: TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.normal),
-              onChanged: (gender ) {
-                print(gender);
-              },
-              equallyAligned: true,
-              animationDuration: Duration(milliseconds: 300),
-              isCircular: true,
-              // default : true,
-              opacityOfGradient: 0.4,
-              padding: const EdgeInsets.all(3),
-              size: 50, //default : 40
+            Container(width: 400,
+              child: GenderPickerWithImage(
+                showOtherGender: true,
+                verticalAlignedText: false,
+                selectedGender: Gender.Male,
+                selectedGenderTextStyle: TextStyle(
+                    color: Color(0xFF8b32a8), fontWeight: FontWeight.bold),
+                unSelectedGenderTextStyle: TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.normal),
+                onChanged: (gender ) {
+                  print(gender);
+                },
+                equallyAligned: true,
+                animationDuration: Duration(milliseconds: 300),
+                isCircular: true,
+                // default : true,
+                opacityOfGradient: 0.4,
+                padding: const EdgeInsets.all(3),
+                size: 50, //default : 40
+              ),
             ),
             Container(
             padding: EdgeInsets.all(15),
             height: MediaQuery.of(context).size.width / 3,
+            width: 400,
+            
             child: Center(
+              
                 child: TextField(
               controller: dateInput,
               //editing controller of this TextField
+              
               decoration: InputDecoration(
                   icon: Icon(Icons.calendar_today), //icon of text field
                   labelText: "Date of Birth" //label text of field
@@ -155,23 +219,23 @@ TextEditingController  my_controller = TextEditingController();
     );
   }
 
-  Row addRadioButton(int btnValue, String title) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        Radio(
-          activeColor: Theme.of(context).primaryColor,
-          value: gender[btnValue],
-          groupValue: select,
-          onChanged: (value) {
-            setState(() {
-              print(value);
-              select = value;
-            });
-          },
-        ),
-        Text(title)
-      ],
-    );
+  // Row addRadioButton(int btnValue, String title) {
+  //   return Row(
+  //     mainAxisAlignment: MainAxisAlignment.start,
+  //     children: <Widget>[
+  //       Radio(
+  //         activeColor: Theme.of(context).primaryColor,
+  //         value: gender[btnValue],
+  //         groupValue: select,
+  //         onChanged: (value) {
+  //           setState(() {
+  //             print(value);
+  //             select = value;
+  //           });
+  //         },
+  //       ),
+  //       Text(title)
+  //     ],
+  //   );
   }
-}
+
