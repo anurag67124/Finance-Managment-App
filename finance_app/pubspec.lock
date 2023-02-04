@@ -169,6 +169,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  currency_picker:
+    dependency: "direct main"
+    description:
+      name: currency_picker
+      sha256: "17f3a7a7f318d7b38c4cfbe819f85187eada480727e0ed001f9a964cc064c81f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.14"
   dart_style:
     dependency: transitive
     description:
@@ -177,6 +185,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.4"
+  dob_input_field:
+    dependency: "direct main"
+    description:
+      name: dob_input_field
+      sha256: b61bfece7d14b4d87fdc1762e7dab55af1e5c8c243227b64a29a126c22e79698
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -205,10 +221,12 @@ packages:
     dependency: transitive
     description:
       name: fixnum
-      sha256: "04be3e934c52e082558cc9ee21f42f5c1cd7a1262f4c63cd0357c08d5bba81ec"
+
+      sha256: "25517a4deb0c03aa0f32fd12db525856438902d9c16536311e76cdc57b31d7d1"
+
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.1"
+    version: "1.1.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -235,6 +253,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.0"
+  gender_picker:
+    dependency: "direct main"
+    description:
+      name: gender_picker
+      sha256: "75180516208bb524ba6164755915edefaff8035cbfbc94073427270c4b1b766c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   glob:
     dependency: transitive
     description:
@@ -323,6 +349,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.8.0"
+  language_picker:
+    dependency: "direct main"
+    description:
+      name: language_picker
+      sha256: "1f5293675ec1359b72979dac8f8d4662d18d6d1b0a484343367cfbbbbcfca3f3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.3"
   lints:
     dependency: transitive
     description:
@@ -483,6 +517,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.1"
+  recase:
+    dependency: transitive
+    description:
+      name: recase
+      sha256: e4eb4ec2dcdee52dcf99cb4ceabaffc631d7424ee55e56f280bc039737f89213
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.0"
   shelf:
     dependency: transitive
     description:
@@ -564,18 +606,22 @@ packages:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_charts
-      sha256: fb76374625e5cfa485ed1d2b080f2b5a6722d95b36d8355a4a9bd0567567d769
+
+      sha256: "91204839376779c4ea4d7d7734abb039b429c4248a051c43079bff2e9b920a6e"
+
       url: "https://pub.dev"
     source: hosted
-    version: "20.4.44"
+    version: "20.4.48"
   syncfusion_flutter_core:
     dependency: transitive
     description:
       name: syncfusion_flutter_core
-      sha256: "66529f3f102c6501a75811e8d931a1908ad9865ea4d3416c40ac05cf62fdcd44"
+
+      sha256: b3e500b1896d40c8961ab430a94fc22eff8fa1b33af03584e2f0b89371c3fa6a
+
       url: "https://pub.dev"
     source: hosted
-    version: "20.4.44"
+    version: "20.4.48"
   term_glyph:
     dependency: transitive
     description:
@@ -657,5 +703,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=2.18.6 <3.0.0"
+  dart: ">=2.19.0 <4.0.0"
   flutter: ">=3.0.0"
