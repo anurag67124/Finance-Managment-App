@@ -40,7 +40,7 @@ int expenses() {
 List<Add_data> today() {
   List<Add_data> a = [];
   var history2 = box.values.toList();
-  DateTime date = new DateTime.now();
+  DateTime date = DateTime.now();
   for (var i = 0; i < history2.length; i++) {
     if (history2[i].datetime.day == date.day) {
       a.add(history2[i]);
@@ -51,7 +51,7 @@ List<Add_data> today() {
 
 List<Add_data> week() {
   List<Add_data> a = [];
-  DateTime date = new DateTime.now();
+  DateTime date = DateTime.now();
   var history2 = box.values.toList();
   for (var i = 0; i < history2.length; i++) {
     if (date.day - 7 <= history2[i].datetime.day &&
@@ -65,7 +65,7 @@ List<Add_data> week() {
 List<Add_data> month() {
   List<Add_data> a = [];
   var history2 = box.values.toList();
-  DateTime date = new DateTime.now();
+  DateTime date = DateTime.now();
   for (var i = 0; i < history2.length; i++) {
     if (history2[i].datetime.month == date.month) {
       a.add(history2[i]);
@@ -77,7 +77,7 @@ List<Add_data> month() {
 List<Add_data> year() {
   List<Add_data> a = [];
   var history2 = box.values.toList();
-  DateTime date = new DateTime.now();
+  DateTime date = DateTime.now();
   for (var i = 0; i < history2.length; i++) {
     if (history2[i].datetime.year == date.year) {
       a.add(history2[i]);
@@ -120,6 +120,7 @@ List time(List<Add_data> history2, bool hour) {
     a.clear();
     c = counter;
   }
+  // ignore: avoid_print
   print(total);
   return total;
 }
