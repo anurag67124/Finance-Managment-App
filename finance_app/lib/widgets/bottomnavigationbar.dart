@@ -3,6 +3,9 @@ import 'package:finance_app/Screens/add.dart';
 import 'package:finance_app/Screens/home.dart';
 import 'package:finance_app/Screens/statistics.dart';
 
+import '../Screens/edit_profile.dart';
+import '../Screens/profile.dart';
+
 class Bottom extends StatefulWidget {
   const Bottom({Key? key}) : super(key: key);
 
@@ -13,8 +16,9 @@ class Bottom extends StatefulWidget {
 class _BottomState extends State<Bottom> {
   // ignore: non_constant_identifier_names
   int index_color = 0;
-  // ignore: non_constant_identifier_names
-  List Screen = [const Home(), const Statistics()];
+
+  List Screen = [Home(), Statistics(),'', ProfilePage()];
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
