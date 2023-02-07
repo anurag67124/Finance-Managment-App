@@ -14,7 +14,18 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   static Color my_color1 = Color.fromARGB(255, 128, 4, 150);
- Currency my_Currency=Currency(code: "INR", name: "Rupees", symbol: "₹", flag: "INR", number: 356, decimalDigits: 7, namePlural: "Rupees", symbolOnLeft: true, decimalSeparator: ".", thousandsSeparator: ",", spaceBetweenAmountAndSymbol: true);
+  Currency my_Currency = Currency(
+      code: "INR",
+      name: "Rupees",
+      symbol: "₹",
+      flag: "INR",
+      number: 356,
+      decimalDigits: 7,
+      namePlural: "Rupees",
+      symbolOnLeft: true,
+      decimalSeparator: ".",
+      thousandsSeparator: ",",
+      spaceBetweenAmountAndSymbol: true);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +49,10 @@ class _ProfilePageState extends State<ProfilePage> {
                           gradient: LinearGradient(
                               begin: Alignment.topRight,
                               end: Alignment.bottomCenter,
-                              colors: <Color>[my_color1, my_color1.withOpacity(0.8)])),
+                              colors: <Color>[
+                                my_color1,
+                                my_color1.withOpacity(0.8)
+                              ])),
                     ),
                     Positioned(
                       bottom: -100,
@@ -62,34 +76,33 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-        
                             Container(
                               width: 80,
                               height: 80,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: Colors.blue,
+                                color: Color.fromARGB(255, 87, 3, 102),
                                 boxShadow: [
                                   BoxShadow(
                                       color: my_color1,
                                       spreadRadius: 2,
                                       blurRadius: 10,
                                       offset: Offset(10, 15)),
-                                    
                                 ],
                               ),
                               child: Center(
                                   child: Text(
-                                "M",
-                                style: TextStyle(fontSize: 50, color: Colors.white),
+                                "P",
+                                style: TextStyle(
+                                    fontSize: 50, color: Colors.white),
                               )),
                             ),
-                            SizedBox(height: 30
-                            ,),
-                            Text("mahesh komma"),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Text("Profile"),
                           ],
                         ),
-                        
                       ),
                     )
                   ],
@@ -98,13 +111,16 @@ class _ProfilePageState extends State<ProfilePage> {
               SizedBox(
                 height: 140,
               ),
-        
+
               ElevatedButton(
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder(),
-                    
+                  style: ElevatedButton.styleFrom(
+                      shape: StadiumBorder(),
                       backgroundColor: my_color1,
                       padding: EdgeInsets.symmetric(horizontal: 20)),
-                  onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => EditProfile()));
+                  },
                   child: Text(
                     "Edit Prifile",
                   )),
@@ -116,143 +132,141 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: ListTile(
                   leading: Container(
                     width: 40,
-              
+
                     height: 40,
-              
+
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                       color: my_color1,
                     ), // BoxDecoration
-              
+
                     child: const Icon(Icons.person_2_outlined),
                   ), // Container
-              
-                  title: Text("Mahesh Komma"),
-              
+
+                  title: Text("Test profile"),
+
                   trailing: Container(
                     width: 30,
-              
+
                     height: 30,
-              
-              // BoxDecoration
+
+                    // BoxDecoration
                   ), // Container
                 ),
               ),
-               InkWell(
+              InkWell(
                 onTap: () {
                   showCurrencyPicker(
-           context: context,
-           showFlag: true,
-           showCurrencyName: true,
-           showCurrencyCode: true,
-           onSelect: (Currency currency) {
-              print('Select currency: ${currency.name}');
-              setState(() {
-          
-              });
-              my_Currency=currency;
-           },
-        );
+                    context: context,
+                    showFlag: true,
+                    showCurrencyName: true,
+                    showCurrencyCode: true,
+                    onSelect: (Currency currency) {
+                      print('Select currency: ${currency.name}');
+                      setState(() {});
+                      my_Currency = currency;
+                    },
+                  );
                 },
-                 child: ListTile(
-                  
+                child: ListTile(
                   leading: Container(
                     width: 40,
-               
+
                     height: 40,
-               
+
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                       color: my_color1,
                     ), // BoxDecoration
-               
+
                     child: Image.asset('images/currency.png'),
                   ), // Container
-               
-                  title: Text("Currency : ${my_Currency.name}",),
-               
+
+                  title: Text(
+                    "Currency : ${my_Currency.name}",
+                  ),
+
                   trailing: Container(
                     width: 30,
-               
+
                     height: 30,
-               
-               // BoxDecoration
+
+                    // BoxDecoration
                   ), // Container
-                           ),
-               ),
-              
-               ListTile(
+                ),
+              ),
+
+              ListTile(
                 leading: Container(
                   width: 40,
-        
+
                   height: 40,
-        
+
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     color: my_color1,
                   ), // BoxDecoration
-        
+
                   child: const Icon(Icons.logout_rounded),
                 ), // Container
-        
+
                 title: Text("Logout"),
-        
+
                 trailing: Container(
                   width: 30,
-        
+
                   height: 30,
-        
-        // BoxDecoration
+
+                  // BoxDecoration
                 ), // Container
-               ),
-        // ListTile(
-        //               leading: Container(
-        //                 width: 40,
-        
-        //                 height: 40,
-        
-        //                 decoration: BoxDecoration(
-        //                   borderRadius: BorderRadius.circular(100),
-        //                   color: Colors.grey,
-        //                 ), // BoxDecoration
-        
-        //                 child: const Icon(Icons.account_circle),
-        //               ), // Container
-        
-        //               title: Text("Mahesh Komma"),
-        
-        //               trailing: Container(
-        //                 width: 30,
-        
-        //                 height: 30,
-        
-        // // BoxDecoration
-        //               ), // Container
-        //             ), ListTile(
-        //               leading: Container(
-        //                 width: 40,
-        
-        //                 height: 40,
-        
-        //                 decoration: BoxDecoration(
-        //                   borderRadius: BorderRadius.circular(100),
-        //                   color: Colors.grey,
-        //                 ), // BoxDecoration
-        
-        //                 child: const Icon(Icons.account_circle),
-        //               ), // Container
-        
-        //               title: Text("Mahesh Komma"),
-        
-        //               trailing: Container(
-        //                 width: 30,
-        
-        //                 height: 30,
-        
-        // // BoxDecoration
-        //               ), // Container
-        //             )
-        
+              ),
+              // ListTile(
+              //               leading: Container(
+              //                 width: 40,
+
+              //                 height: 40,
+
+              //                 decoration: BoxDecoration(
+              //                   borderRadius: BorderRadius.circular(100),
+              //                   color: Colors.grey,
+              //                 ), // BoxDecoration
+
+              //                 child: const Icon(Icons.account_circle),
+              //               ), // Container
+
+              //               title: Text("Mahesh Komma"),
+
+              //               trailing: Container(
+              //                 width: 30,
+
+              //                 height: 30,
+
+              // // BoxDecoration
+              //               ), // Container
+              //             ), ListTile(
+              //               leading: Container(
+              //                 width: 40,
+
+              //                 height: 40,
+
+              //                 decoration: BoxDecoration(
+              //                   borderRadius: BorderRadius.circular(100),
+              //                   color: Colors.grey,
+              //                 ), // BoxDecoration
+
+              //                 child: const Icon(Icons.account_circle),
+              //               ), // Container
+
+              //               title: Text("Mahesh Komma"),
+
+              //               trailing: Container(
+              //                 width: 30,
+
+              //                 height: 30,
+
+              // // BoxDecoration
+              //               ), // Container
+              //             )
             ],
           ),
         ),
