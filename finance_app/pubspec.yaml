@@ -46,6 +46,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   language_picker: ^0.4.3
   gender_picker: ^1.1.0
+  settings_ui: ^2.0.2
 
 dev_dependencies:
   flutter_test:

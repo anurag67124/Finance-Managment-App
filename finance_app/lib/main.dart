@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:finance_app/Screens/home.dart';
+import 'package:finance_app/Screens/settings.dart';
 import 'package:finance_app/Screens/statistics.dart';
 import 'package:finance_app/widgets/bottomnavigationbar.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Bottom(),
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch:Colors.purple,
         buttonTheme: ButtonThemeData(buttonColor:my_color )
       ),
     );
