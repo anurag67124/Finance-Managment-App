@@ -1,6 +1,8 @@
 import 'package:finance_app/data/1.dart';
 
+// ignore: non_constant_identifier_names
 List<money> geter_top() {
+  // ignore: non_constant_identifier_names
   money snap_food = money();
   snap_food.time = 'jan 30,2022';
   snap_food.image = 'mac.jpg';
