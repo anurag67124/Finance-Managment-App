@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_app/theme.dart';
 
@@ -8,6 +9,7 @@ class LogInForm extends StatefulWidget {
 
 class _LogInFormState extends State<LogInForm> {
   bool _isObscure = true;
+
   @override
   Widget build(BuildContext context) {
     return Column(

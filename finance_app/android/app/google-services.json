@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "90141560525",
+    "project_id": "finance-management-app-cead0",
+    "storage_bucket": "finance-management-app-cead0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90141560525:android:676ecc923c94252991a384",
+        "android_client_info": {
+          "package_name": "com.example.finance_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90141560525-jj3udn365phd16pi0tv5rqv5h0sd6452.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATSypNNmb0QmQQ8qJMi4J5LhY3xkGSdqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90141560525-jj3udn365phd16pi0tv5rqv5h0sd6452.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

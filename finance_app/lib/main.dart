@@ -1,3 +1,5 @@
+import 'package:finance_app/Screens/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_app/Screens/home.dart';
 import 'package:finance_app/Screens/statistics.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Bottom(),
+      home: Bottom(),
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           buttonTheme: ButtonThemeData(buttonColor: my_color)),
