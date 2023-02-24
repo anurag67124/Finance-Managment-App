@@ -80,19 +80,19 @@ class _Add_ScreenState extends State<Add_Screen> {
       width: 340,
       child: Column(
         children: [
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           name(),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           explain(),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           amount(),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           How(),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           date_time(),
-          Spacer(),
+          const Spacer(),
           save(),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
         ],
       ),
     );
@@ -110,11 +110,11 @@ class _Add_ScreenState extends State<Add_Screen> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Color.fromARGB(255, 52, 3, 62),
+          color: const Color.fromARGB(255, 52, 3, 62),
         ),
         width: 120,
         height: 50,
-        child: Text(
+        child: const Text(
           'Save',
           style: TextStyle(
             fontFamily: 'f',
@@ -132,7 +132,7 @@ class _Add_ScreenState extends State<Add_Screen> {
       alignment: Alignment.bottomLeft,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(width: 2, color: Color(0xffC5C5C5))),
+          border: Border.all(width: 2, color: const Color(0xffC5C5C5))),
       width: 300,
       child: TextButton(
         onPressed: () async {
@@ -148,7 +148,7 @@ class _Add_ScreenState extends State<Add_Screen> {
         },
         child: Text(
           'Date : ${date.year} / ${date.day} / ${date.month}',
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 15,
             color: Colors.black,
           ),
@@ -161,13 +161,13 @@ class _Add_ScreenState extends State<Add_Screen> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         width: 300,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             width: 2,
-            color: Color(0xffC5C5C5),
+            color: const Color(0xffC5C5C5),
           ),
         ),
         child: DropdownButton<String>(
@@ -185,7 +185,7 @@ class _Add_ScreenState extends State<Add_Screen> {
                         children: [
                           Text(
                             e,
-                            style: TextStyle(fontSize: 18),
+                            style: const TextStyle(fontSize: 18),
                           )
                         ],
                       ),
@@ -198,8 +198,8 @@ class _Add_ScreenState extends State<Add_Screen> {
                     children: [Text(e)],
                   ))
               .toList(),
-          hint: Padding(
-            padding: const EdgeInsets.only(top: 12),
+          hint: const Padding(
+            padding: EdgeInsets.only(top: 12),
             child: Text(
               'How',
               style: TextStyle(color: Colors.grey),
@@ -221,15 +221,16 @@ class _Add_ScreenState extends State<Add_Screen> {
         focusNode: amount_,
         controller: amount_c,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           labelText: 'amount',
           labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xffC5C5C5))),
+              borderSide: const BorderSide(width: 2, color: Color(0xffC5C5C5))),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                   width: 2, color: Color.fromARGB(255, 224, 114, 17))),
         ),
       ),
@@ -243,15 +244,16 @@ class _Add_ScreenState extends State<Add_Screen> {
         focusNode: ex,
         controller: expalin_C,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           labelText: 'explain',
           labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xffC5C5C5))),
+              borderSide: const BorderSide(width: 2, color: Color(0xffC5C5C5))),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color(0xff368983))),
+              borderSide: const BorderSide(width: 2, color: Color(0xff368983))),
         ),
       ),
     );
@@ -261,13 +263,13 @@ class _Add_ScreenState extends State<Add_Screen> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         width: 300,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             width: 2,
-            color: Color(0xffC5C5C5),
+            color: const Color(0xffC5C5C5),
           ),
         ),
         child: DropdownButton<String>(
@@ -287,10 +289,10 @@ class _Add_ScreenState extends State<Add_Screen> {
                             width: 40,
                             child: Image.asset('images/${e}.png'),
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Text(
                             e,
-                            style: TextStyle(fontSize: 18),
+                            style: const TextStyle(fontSize: 18),
                           )
                         ],
                       ),
@@ -305,13 +307,13 @@ class _Add_ScreenState extends State<Add_Screen> {
                         width: 42,
                         child: Image.asset('images/${e}.png'),
                       ),
-                      SizedBox(width: 5),
+                      const SizedBox(width: 5),
                       Text(e)
                     ],
                   ))
               .toList(),
-          hint: Padding(
-            padding: const EdgeInsets.only(top: 12),
+          hint: const Padding(
+            padding: EdgeInsets.only(top: 12),
             child: Text(
               'Name',
               style: TextStyle(color: Colors.grey),
@@ -331,7 +333,7 @@ class _Add_ScreenState extends State<Add_Screen> {
         Container(
           width: double.infinity,
           height: 240,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color.fromARGB(255, 52, 3, 62),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
@@ -340,9 +342,9 @@ class _Add_ScreenState extends State<Add_Screen> {
           ),
           child: Column(
             children: [
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -351,16 +353,16 @@ class _Add_ScreenState extends State<Add_Screen> {
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(Icons.arrow_back, color: Colors.white),
+                      child: const Icon(Icons.arrow_back, color: Colors.white),
                     ),
-                    Text(
+                    const Text(
                       'Adding',
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Colors.white),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.attach_file_outlined,
                       color: Colors.white,
                     )
