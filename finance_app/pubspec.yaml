@@ -48,6 +48,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   language_picker: ^0.4.3
   gender_picker: ^1.1.0
+  settings_ui: ^2.0.2
 
 dev_dependencies:
   flutter_test:

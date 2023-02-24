@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:finance_app/Screens/settings.dart';
 import 'package:intl/intl.dart';
 import 'package:currency_picker/currency_picker.dart';
 import 'package:flutter/material.dart';
@@ -129,29 +130,36 @@ class _ProfilePageState extends State<ProfilePage> {
                 height: 20,
               ),
               Container(
-                child: ListTile(
-                  leading: Container(
-                    width: 40,
 
-                    height: 40,
+                child: InkWell(
+                  onTap: () => {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Settings() ))
+                  },
+                  child: ListTile(
+                    leading: Container(
+                      width: 40,
+                              
+                      height: 40,
+                              
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: my_color1,
+                      ), // BoxDecoration
+                              
+                      child: const Icon(Icons.settings),
+                    ), // Container
+                              
+                    title: Text("Settings"),
+                              
+                    trailing: Container(
+                      width: 30,
+                              
+                      height: 30,
+                              
+                              // BoxDecoration
+                    ), // Container
+                  ),
 
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: my_color1,
-                    ), // BoxDecoration
-
-                    child: const Icon(Icons.person),
-                  ), // Container
-
-                  title: Text("Test profile"),
-
-                  trailing: Container(
-                    width: 30,
-
-                    height: 30,
-
-                    // BoxDecoration
-                  ), // Container
                 ),
               ),
               InkWell(

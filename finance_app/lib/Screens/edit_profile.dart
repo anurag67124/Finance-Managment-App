@@ -18,7 +18,7 @@ class EditProfile extends StatefulWidget {
 class EditProfileState extends State<EditProfile> {
 
   
-  
+ 
   TextEditingController  first_name_con = TextEditingController();
   TextEditingController  last_name_con = TextEditingController();
   TextEditingController  email_con = TextEditingController();
