@@ -178,7 +178,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          'Jugunu',
+                          'Everyone',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,

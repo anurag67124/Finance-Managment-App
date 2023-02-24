@@ -4,7 +4,7 @@ import 'package:finance_app/Screens/settings.dart';
 import 'package:finance_app/Screens/statistics.dart';
 import 'package:finance_app/widgets/bottomnavigationbar.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
+import 'package:finance_app/screens/login.dart';
 import 'data/model/add_date.dart';
 
 void main() async {
@@ -16,17 +16,22 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-   static Color my_color = Color.fromARGB(255, 128, 4, 150);
+
+  static Color my_color = const Color.fromARGB(255, 128, 4, 150);
 
   @override
   Widget build(BuildContext context) {
+
     return  MaterialApp(
+
       debugShowCheckedModeBanner: false,
-      home: Bottom(),
+      home: const Bottom(),
       theme: ThemeData(
+
         primarySwatch:Colors.deepPurple,
         buttonTheme: ButtonThemeData(buttonColor:my_color )
       ),
+
     );
   }
 }
