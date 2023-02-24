@@ -41,7 +41,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.2.5
   flutter_signin_button: ^2.0.0
-
+  smooth_page_indicator: ^1.0.0
 
 
   # The following adds the Cupertino Icons font to your application.

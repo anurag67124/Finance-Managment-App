@@ -140,7 +140,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       color: my_color1,
                     ), // BoxDecoration
 
-                    child: const Icon(Icons.person_2_outlined),
+                    child: const Icon(Icons.person),
                   ), // Container
 
                   title: Text("Test profile"),
