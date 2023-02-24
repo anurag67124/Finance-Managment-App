@@ -1,3 +1,4 @@
+import 'package:finance_app/widgets/bottomnavigationbar.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_app/screens/reset_password.dart';
 import 'package:finance_app/screens/signup.dart';
@@ -90,8 +91,20 @@ class LogInScreen extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              PrimaryButton(
-                buttonText: 'Log In',
+              InkWell(
+                  onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Bottom()));
+                },
+
+                child: PrimaryButton(
+                  buttonText: 'Log In',
+                  
+              
+              
+                ),
               ),
               SizedBox(
                 height: 20,

@@ -2,11 +2,13 @@ import 'package:finance_app/Screens/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_app/Screens/home.dart';
+import 'package:finance_app/Screens/settings.dart';
 import 'package:finance_app/Screens/statistics.dart';
 import 'package:finance_app/widgets/bottomnavigationbar.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:finance_app/screens/login.dart';
 import 'data/model/add_date.dart';
+import 'onboarding_screen.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Bottom(),
+      home: const Bottom(),
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           buttonTheme: ButtonThemeData(buttonColor: my_color)),
