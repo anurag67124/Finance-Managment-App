@@ -1,4 +1,5 @@
 //import 'package:dob_input_field/dob_input_field.dart';
+import 'package:finance_app/Screens/profile.dart';
 import 'package:gender_picker/source/enums.dart';
 import 'package:gender_picker/gender_picker.dart';
 import 'package:flutter/material.dart';
@@ -211,7 +212,14 @@ class EditProfileState extends State<EditProfile> {
               onPressed: null,
               style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 128, 4, 150))),
               
-              child: Text("SAVE", style: TextStyle(color: Colors.white),),
+              child: InkWell(
+                  onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProfilePage()));
+                },
+                child: Text("SAVE", style: TextStyle(color: Colors.white),)),
             )
           ]),
         ),

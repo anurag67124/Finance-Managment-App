@@ -6,6 +6,7 @@ import 'package:finance_app/widgets/bottomnavigationbar.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:finance_app/screens/login.dart';
 import 'data/model/add_date.dart';
+import 'onboarding_screen.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
 
       debugShowCheckedModeBanner: false,
-      home: const Bottom(),
+      home:  OnBoardingScreen(),
       theme: ThemeData(
 
         primarySwatch:Colors.deepPurple,

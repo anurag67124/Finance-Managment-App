@@ -8,6 +8,8 @@ import 'package:finance_app/widgets/checkbox.dart';
 import 'package:finance_app/widgets/signup_form.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
+import '../widgets/bottomnavigationbar.dart';
+
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -86,7 +88,14 @@ class SignUpScreen extends StatelessWidget {
             ),
             Padding(
               padding: kDefaultPadding,
-              child: PrimaryButton(buttonText: 'Sign Up'),
+              child: InkWell(
+                  onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Bottom()));
+                },
+                child: PrimaryButton(buttonText: 'Sign Up')),
             ),
             SizedBox(
               height: 20,

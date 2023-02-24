@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:finance_app/Screens/login.dart';
 import 'package:finance_app/Screens/settings.dart';
 import 'package:intl/intl.dart';
 import 'package:currency_picker/currency_picker.dart';
@@ -218,7 +219,13 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: const Icon(Icons.logout_rounded),
                 ), // Container
 
-                title: Text("Logout"),
+                title: InkWell(
+                    onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LogInScreen()));
+                },child: Text("Logout")),
 
                 trailing: Container(
                   width: 30,

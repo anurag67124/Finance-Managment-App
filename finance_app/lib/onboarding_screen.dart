@@ -1,3 +1,4 @@
+import 'package:finance_app/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -64,7 +65,7 @@ bool onLastPage = false;
                   context, 
                   MaterialPageRoute(
                     builder: (context){
-                  return HomePage();
+                  return LogInScreen();
                   },
                   ),
                   );
