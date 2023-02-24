@@ -221,9 +221,7 @@ packages:
     dependency: transitive
     description:
       name: fixnum
-
       sha256: "25517a4deb0c03aa0f32fd12db525856438902d9c16536311e76cdc57b31d7d1"
-
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
@@ -614,9 +612,7 @@ packages:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_charts
-
       sha256: "91204839376779c4ea4d7d7734abb039b429c4248a051c43079bff2e9b920a6e"
-
       url: "https://pub.dev"
     source: hosted
     version: "20.4.48"
@@ -624,9 +620,7 @@ packages:
     dependency: transitive
     description:
       name: syncfusion_flutter_core
-
       sha256: b3e500b1896d40c8961ab430a94fc22eff8fa1b33af03584e2f0b89371c3fa6a
-
       url: "https://pub.dev"
     source: hosted
     version: "20.4.48"

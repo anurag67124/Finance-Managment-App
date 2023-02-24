@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Bottom(),
       theme: ThemeData(
-        primarySwatch:Colors.purple,
+        primarySwatch:Colors.deepPurple,
         buttonTheme: ButtonThemeData(buttonColor:my_color )
       ),
     );
