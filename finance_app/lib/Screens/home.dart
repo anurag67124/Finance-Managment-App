@@ -170,7 +170,7 @@ class _HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          'Good Evening',
+                          'Good Morning',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 16,
@@ -178,7 +178,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          'Everyone',
+                          'User',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
