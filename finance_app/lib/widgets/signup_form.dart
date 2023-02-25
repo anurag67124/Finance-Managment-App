@@ -7,24 +7,30 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
+  TextEditingController first_name_con = TextEditingController();
+  TextEditingController last_name_con = TextEditingController();
+  TextEditingController email_con = TextEditingController();
+  TextEditingController password_con = TextEditingController();
   bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        buildInputForm('First Name', false),
-        buildInputForm('Last Name', false),
-        buildInputForm('Email', false),
-        buildInputForm('Password', true),
-        buildInputForm('Confirm Password', true),
+        buildInputForm('First Name', false, first_name_con),
+        buildInputForm('Last Name', false, last_name_con),
+        buildInputForm('Email', false, email_con),
+        buildInputForm('Password', true, password_con),
+        buildInputForm('Confirm Password', true, password_con),
       ],
     );
   }
 
-  Padding buildInputForm(String hint, bool pass) {
+  Padding buildInputForm(
+      String hint, bool pass, TextEditingController controller) {
     return Padding(
         padding: EdgeInsets.symmetric(vertical: 5),
         child: TextFormField(
+          controller: controller,
           obscureText: pass ? _isObscure : false,
           decoration: InputDecoration(
             hintText: hint,

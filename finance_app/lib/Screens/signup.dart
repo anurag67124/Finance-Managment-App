@@ -7,10 +7,20 @@ import 'package:finance_app/widgets/primary_button.dart';
 import 'package:finance_app/widgets/checkbox.dart';
 import 'package:finance_app/widgets/signup_form.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import '../resources/auth_methods.dart';
 import '../widgets/bottomnavigationbar.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignUpScreen extends StatefulWidget {
+  @override
+  State<SignUpScreen> createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
+  TextEditingController first_name_con = TextEditingController();
+  TextEditingController last_name_con = TextEditingController();
+  TextEditingController email_con = TextEditingController();
+  TextEditingController password_con = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,13 +99,18 @@ class SignUpScreen extends StatelessWidget {
             Padding(
               padding: kDefaultPadding,
               child: InkWell(
-                  onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Bottom()));
-                },
-                child: PrimaryButton(buttonText: 'Sign Up')),
+                  onTap: () async {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Bottom()));
+                    String res = await AuthMethods().signUpUser(
+                      email: email_con.text,
+                      password: password_con.text,
+                      firstname: first_name_con.text,
+                      lastname: last_name_con.text,
+                    );
+                    print(res);
+                  },
+                  child: PrimaryButton(buttonText: 'Sign Up')),
             ),
             SizedBox(
               height: 20,

@@ -14,6 +14,8 @@ import 'package:finance_app/screens/login.dart';
 import 'data/model/add_date.dart';
 import 'onboarding_screen.dart';
 import 'package:finance_app/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 //comment
 
 void main() async {

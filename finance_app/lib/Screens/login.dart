@@ -7,7 +7,26 @@ import 'package:finance_app/widgets/login_form.dart';
 import 'package:finance_app/widgets/primary_button.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-class LogInScreen extends StatelessWidget {
+class LogInScreen extends StatefulWidget {
+  @override
+  State<LogInScreen> createState() => _LogInScreenState();
+}
+
+class _LogInScreenState extends State<LogInScreen> {
+  TextEditingController first_name_con = TextEditingController();
+  TextEditingController last_name_con = TextEditingController();
+  TextEditingController email_con = TextEditingController();
+  TextEditingController password_con = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    first_name_con.dispose();
+    last_name_con.dispose();
+    email_con.dispose();
+    password_con.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,18 +111,12 @@ class LogInScreen extends StatelessWidget {
                 height: 30,
               ),
               InkWell(
-                  onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Bottom()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Bottom()));
                 },
-
                 child: PrimaryButton(
                   buttonText: 'Log In',
-                  
-              
-              
                 ),
               ),
               SizedBox(
