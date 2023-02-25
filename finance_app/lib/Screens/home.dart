@@ -4,6 +4,8 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:finance_app/data/listdata.dart';
 import 'package:finance_app/data/model/add_date.dart';
 import 'package:finance_app/data/utlity.dart';
+import 'package:finance_app/theme.dart';
+import 'dart:math' as math;
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,12 +19,12 @@ class _HomeState extends State<Home> {
   final box = Hive.box<Add_data>('data');
   final List<String> day = [
     'Monday',
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    'friday',
-    'saturday',
-    'sunday'
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday'
   ];
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,7 @@ class _HomeState extends State<Home> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 19,
-                                color: Colors.black,
+                                color: kBlackColor,
                               ),
                             ),
                             Text(
@@ -55,7 +57,7 @@ class _HomeState extends State<Home> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 15,
-                                color: Color.fromARGB(255, 8, 1, 1),
+                                color: kBlackColor,
                               ),
                             ),
                           ],
@@ -119,7 +121,9 @@ class _HomeState extends State<Home> {
         style: TextStyle(
           fontWeight: FontWeight.w600,
           fontSize: 19,
-          color: history.IN == 'Income' ? Colors.green : Colors.red,
+          color: history.IN == 'Income'
+              ? Colors.green
+              : Color.fromARGB(255, 190, 98, 98),
         ),
       ),
     );
@@ -134,7 +138,11 @@ class _HomeState extends State<Home> {
               width: double.infinity,
               height: 240,
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 52, 3, 62),
+                gradient: LinearGradient(
+                  colors: [kPrimaryColor, kDarkGreyColor],
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.topRight,
+                ),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -150,7 +158,7 @@ class _HomeState extends State<Home> {
                       child: Container(
                         height: 50,
                         width: 50,
-                        color: const Color.fromRGBO(250, 250, 250, 0.1),
+                        color: kBlackColor,
                         child: IconButton(
                           icon: const Icon(Icons.notification_add_outlined,
                               size: 30, color: Colors.white),
@@ -202,13 +210,17 @@ class _HomeState extends State<Home> {
             decoration: BoxDecoration(
               boxShadow: const [
                 BoxShadow(
-                  color: Color.fromRGBO(47, 125, 121, 0.3),
+                  color: kPrimaryColor,
                   offset: Offset(0, 6),
                   blurRadius: 12,
                   spreadRadius: 6,
                 ),
               ],
-              color: const Color.fromARGB(255, 113, 3, 128),
+              gradient: LinearGradient(
+                colors: [kPrimaryColor, kDarkGreyColor],
+                begin: Alignment.bottomRight,
+                end: Alignment.topLeft,
+              ),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Column(
@@ -282,7 +294,7 @@ class _HomeState extends State<Home> {
                         children: const [
                           CircleAvatar(
                             radius: 13,
-                            backgroundColor: Color.fromRGBO(150, 6, 6, 1),
+                            backgroundColor: Color.fromARGB(255, 199, 6, 6),
                             child: Icon(
                               Icons.arrow_upward,
                               color: Color.fromARGB(255, 255, 255, 255),

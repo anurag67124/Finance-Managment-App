@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:finance_app/Screens/add.dart';
 import 'package:finance_app/Screens/home.dart';
 import 'package:finance_app/Screens/statistics.dart';
-
+import 'package:finance_app/theme.dart';
 import '../Screens/edit_profile.dart';
 import '../Screens/profile.dart';
 
@@ -17,8 +17,8 @@ class _BottomState extends State<Bottom> {
   // ignore: non_constant_identifier_names
   int index_color = 0;
 
-  List Screen = [Home(), Statistics(),'', ProfilePage()];
- 
+  List Screen = [Home(), Statistics(), '', ProfilePage()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +29,7 @@ class _BottomState extends State<Bottom> {
               MaterialPageRoute(builder: (context) => const Add_Screen()));
         },
         child: const Icon(Icons.add),
-        backgroundColor: const Color.fromARGB(255, 52, 3, 62),
+        backgroundColor: kPrimaryColor,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -48,9 +48,7 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.home,
                   size: 30,
-                  color: index_color == 0
-                      ? const Color.fromARGB(255, 128, 4, 150)
-                      : Colors.black,
+                  color: index_color == 0 ? kSecondaryColor : kPrimaryColor,
                 ),
               ),
               GestureDetector(
@@ -62,9 +60,7 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.bar_chart_outlined,
                   size: 30,
-                  color: index_color == 1
-                      ? const Color.fromARGB(255, 128, 4, 150)
-                      : Colors.black,
+                  color: index_color == 1 ? kSecondaryColor : kPrimaryColor,
                 ),
               ),
               const SizedBox(width: 10),
@@ -77,9 +73,7 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.account_balance_wallet_outlined,
                   size: 30,
-                  color: index_color == 2
-                      ? const Color.fromARGB(255, 128, 4, 150)
-                      : Colors.black,
+                  color: index_color == 2 ? kSecondaryColor : kPrimaryColor,
                 ),
               ),
               GestureDetector(
@@ -91,9 +85,7 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.person_outlined,
                   size: 30,
-                  color: index_color == 3
-                      ? const Color.fromARGB(255, 128, 4, 150)
-                      : Colors.black,
+                  color: index_color == 3 ? kSecondaryColor : kPrimaryColor,
                 ),
               ),
             ],

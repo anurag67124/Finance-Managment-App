@@ -1,3 +1,4 @@
+import 'package:finance_app/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:finance_app/data/utlity.dart';
@@ -46,8 +47,8 @@ class _StatisticsState extends State<Statistics> {
               const Text(
                 'Statistics',
                 style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
+                  color: kPrimaryColor,
+                  fontSize: 32,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -73,15 +74,15 @@ class _StatisticsState extends State<Statistics> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: index_color == index
-                                  ? const Color.fromARGB(255, 52, 3, 62)
-                                  : Colors.white,
+                                  ? kBlackColor
+                                  : Color.fromARGB(255, 220, 220, 220),
                             ),
                             alignment: Alignment.center,
                             child: Text(
                               day[index],
                               style: TextStyle(
                                 color: index_color == index
-                                    ? Colors.white
+                                    ? Color.fromARGB(255, 220, 220, 220)
                                     : Colors.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -107,8 +108,8 @@ class _StatisticsState extends State<Statistics> {
                     Text(
                       'Top Spending',
                       style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
+                          color: kPrimaryColor,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
                     Icon(
