@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:finance_app/theme.dart';
 import '../main.dart';
+import '../widgets/bottomnavigationbar.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
@@ -211,9 +212,17 @@ class EditProfileState extends State<EditProfile> {
             SizedBox(
               height: 20,
             ),
-            Padding(
-                padding: kDefaultPadding,
-                child: PrimaryButton(buttonText: 'SAVE')),
+            InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Bottom()));
+                },
+              child: Padding(
+                  padding: kDefaultPadding,
+                  child: PrimaryButton(buttonText: 'SAVE')),
+            ),
           ]),
         ),
       ),
