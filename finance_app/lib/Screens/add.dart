@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:finance_app/data/model/add_date.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:finance_app/theme.dart';
 
 class Add_Screen extends StatefulWidget {
   const Add_Screen({super.key});
@@ -19,22 +20,22 @@ class _Add_ScreenState extends State<Add_Screen> {
   final TextEditingController amount_c = TextEditingController();
   FocusNode amount_ = FocusNode();
   final List<String> _item = [
-    'food',
-    "Transfer",
-    "Transportation",
-    "Education",
-    "beauty",
-    "health",
-    "clothes",
-    "home",
-    "electricity",
-    "entertainment",
-    "gift",
-    "maintenance",
-    "tax",
-    "fruits",
-    "veggies",
-    "phone"
+    'Food',
+    'Transfer',
+    'Transportation',
+    'Education',
+    'Beauty',
+    'Health',
+    'Clothes',
+    'Home',
+    'Electricity',
+    'Entertainment',
+    'Gift',
+    'Maintenance',
+    'Tax',
+    'Fruits',
+    'Veggies',
+    'Phone'
   ];
   final List<String> _itemei = [
     'Income',
@@ -54,7 +55,7 @@ class _Add_ScreenState extends State<Add_Screen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: kDarkGreyColor,
       body: SafeArea(
         child: Stack(
           alignment: AlignmentDirectional.center,
@@ -80,7 +81,7 @@ class _Add_ScreenState extends State<Add_Screen> {
       width: 340,
       child: Column(
         children: [
-          const SizedBox(height: 50),
+          const SizedBox(height: 30),
           name(),
           const SizedBox(height: 30),
           explain(),
@@ -92,7 +93,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           date_time(),
           const Spacer(),
           save(),
-          const SizedBox(height: 25),
+          const SizedBox(height: 45),
         ],
       ),
     );
@@ -117,10 +118,9 @@ class _Add_ScreenState extends State<Add_Screen> {
         child: const Text(
           'Save',
           style: TextStyle(
-            fontFamily: 'f',
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w700,
             color: Colors.white,
-            fontSize: 17,
+            fontSize: 18,
           ),
         ),
       ),
@@ -132,7 +132,7 @@ class _Add_ScreenState extends State<Add_Screen> {
       alignment: Alignment.bottomLeft,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(width: 2, color: const Color(0xffC5C5C5))),
+          border: Border.all(width: 2, color: kZambeziColor)),
       width: 300,
       child: TextButton(
         onPressed: () async {
@@ -150,7 +150,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           'Date : ${date.year} / ${date.day} / ${date.month}',
           style: const TextStyle(
             fontSize: 15,
-            color: Colors.black,
+            color: kPrimaryColor,
           ),
         ),
       ),
@@ -167,7 +167,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             width: 2,
-            color: const Color(0xffC5C5C5),
+            color: kDarkGreyColor,
           ),
         ),
         child: DropdownButton<String>(
@@ -199,10 +199,10 @@ class _Add_ScreenState extends State<Add_Screen> {
                   ))
               .toList(),
           hint: const Padding(
-            padding: EdgeInsets.only(top: 12),
+            padding: EdgeInsets.symmetric(),
             child: Text(
-              'How',
-              style: TextStyle(color: Colors.grey),
+              'Income or Expenditure',
+              style: TextStyle(color: kBlackColor),
             ),
           ),
           dropdownColor: Colors.white,
@@ -223,11 +223,11 @@ class _Add_ScreenState extends State<Add_Screen> {
         decoration: InputDecoration(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-          labelText: 'amount',
-          labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
+          labelText: 'Amount',
+          labelStyle: TextStyle(fontSize: 17, color: kBlackColor),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(width: 2, color: Color(0xffC5C5C5))),
+              borderSide: const BorderSide(width: 2, color: kDarkGreyColor)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: const BorderSide(
@@ -246,14 +246,14 @@ class _Add_ScreenState extends State<Add_Screen> {
         decoration: InputDecoration(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-          labelText: 'explain',
-          labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
+          labelText: 'About',
+          labelStyle: TextStyle(fontSize: 17, color: kZambeziColor),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(width: 2, color: Color(0xffC5C5C5))),
+              borderSide: const BorderSide(width: 2, color: kSecondaryColor)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(width: 2, color: Color(0xff368983))),
+              borderSide: const BorderSide(width: 2, color: kPrimaryColor)),
         ),
       ),
     );
@@ -269,7 +269,7 @@ class _Add_ScreenState extends State<Add_Screen> {
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             width: 2,
-            color: const Color(0xffC5C5C5),
+            color: kZambeziColor,
           ),
         ),
         child: DropdownButton<String>(
@@ -313,10 +313,10 @@ class _Add_ScreenState extends State<Add_Screen> {
                   ))
               .toList(),
           hint: const Padding(
-            padding: EdgeInsets.only(top: 12),
+            padding: EdgeInsets.symmetric(),
             child: Text(
               'Name',
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(color: kBlackColor),
             ),
           ),
           dropdownColor: Colors.white,
@@ -334,7 +334,11 @@ class _Add_ScreenState extends State<Add_Screen> {
           width: double.infinity,
           height: 240,
           decoration: const BoxDecoration(
-            color: Color.fromARGB(255, 52, 3, 62),
+            gradient: LinearGradient(
+              colors: [kPrimaryColor, kSecondaryColor],
+              begin: Alignment.bottomLeft,
+              end: Alignment.topLeft,
+            ),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
