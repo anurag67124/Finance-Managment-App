@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: OnBoardingScreen(),
-      home: OnBoardingScreen(),
       theme: ThemeData(
           primaryColor: kPrimaryColor,
           buttonTheme: ButtonThemeData(buttonColor: my_color)),
