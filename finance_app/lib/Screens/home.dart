@@ -178,7 +178,7 @@ class _HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          'Good Morning',
+                          'Good Afternoon',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 16,
@@ -272,7 +272,7 @@ class _HomeState extends State<Home> {
                         children: const [
                           CircleAvatar(
                             radius: 13,
-                            backgroundColor: Color.fromARGB(255, 8, 143, 62),
+                            backgroundColor: Color.fromARGB(255, 3, 95, 7),
                             child: Icon(
                               Icons.arrow_downward,
                               color: Colors.white,
@@ -326,7 +326,7 @@ class _HomeState extends State<Home> {
                         style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
-                          color: Color.fromARGB(255, 3, 156, 11),
+                          color: Color.fromARGB(255, 3, 95, 7),
                         ),
                       ),
                       Text(
