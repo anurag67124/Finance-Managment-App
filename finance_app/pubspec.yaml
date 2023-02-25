@@ -39,6 +39,7 @@ dependencies:
   
   currency_picker: ^2.0.14
   cupertino_icons: ^1.0.2
+  firebase_core: ^2.7.0
   firebase_auth: ^4.2.5
   flutter_signin_button: ^2.0.0
   smooth_page_indicator: ^1.0.0
