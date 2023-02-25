@@ -3,6 +3,8 @@ import 'package:finance_app/data/model/add_date.dart';
 import 'package:finance_app/data/utlity.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
+import '../theme.dart';
+
 class Chart extends StatefulWidget {
   int indexx;
   Chart({Key? key, required this.indexx}) : super(key: key);
@@ -47,7 +49,7 @@ class _ChartState extends State<Chart> {
         primaryXAxis: CategoryAxis(),
         series: <SplineSeries<SalesData, String>>[
           SplineSeries<SalesData, String>(
-            color: Color.fromARGB(255, 52, 3, 62),
+            color: kBlackColor,
             width: 3,
             dataSource: <SalesData>[
               ...List.generate(time(a!, b ? true : false).length, (index) {

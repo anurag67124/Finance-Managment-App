@@ -1,3 +1,7 @@
+import 'package:finance_app/Screens/add.dart';
+import 'package:finance_app/Screens/edit_profile.dart';
+import 'package:finance_app/Screens/profile.dart';
+import 'package:finance_app/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_app/Screens/home.dart';
 import 'package:finance_app/Screens/settings.dart';
@@ -7,6 +11,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:finance_app/screens/login.dart';
 import 'data/model/add_date.dart';
 import 'onboarding_screen.dart';
+import 'package:finance_app/theme.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -18,21 +23,16 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static Color my_color = const Color.fromARGB(255, 128, 4, 150);
+  static Color my_color = kSecondaryColor;
 
   @override
   Widget build(BuildContext context) {
-
-    return  MaterialApp(
-
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  OnBoardingScreen(),
+      home: OnBoardingScreen(),
       theme: ThemeData(
-
-        primarySwatch:Colors.deepPurple,
-        buttonTheme: ButtonThemeData(buttonColor:my_color )
-      ),
-
+          primaryColor: kPrimaryColor,
+          buttonTheme: ButtonThemeData(buttonColor: my_color)),
     );
   }
 }
