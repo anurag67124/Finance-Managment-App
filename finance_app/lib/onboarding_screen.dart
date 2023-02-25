@@ -1,4 +1,5 @@
 import 'package:finance_app/screens/login.dart';
+import 'package:finance_app/widgets/bottomnavigationbar.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -56,7 +57,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return HomePage();
+                                return Bottom();
                               },
                             ),
                           );
@@ -65,6 +66,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       )
                     : GestureDetector(
                         onTap: () {
+                           
+                
+               
+
+
                           _controller.nextPage(
                             duration: Duration(milliseconds: 500),
                             curve: Curves.easeIn,
