@@ -14,6 +14,7 @@ import 'package:finance_app/screens/login.dart';
 import 'data/model/add_date.dart';
 import 'onboarding_screen.dart';
 import 'package:finance_app/theme.dart';
+//comment
 
 void main() async {
   await Hive.initFlutter();
