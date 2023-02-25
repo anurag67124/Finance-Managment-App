@@ -17,7 +17,7 @@ class _BottomState extends State<Bottom> {
   // ignore: non_constant_identifier_names
   int index_color = 0;
 
-  List Screen = [Home(), Statistics(), '', ProfilePage()];
+  List Screen = [Home(), Statistics(), Home(), ProfilePage()];
 
   @override
   Widget build(BuildContext context) {
